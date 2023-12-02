@@ -7,40 +7,25 @@
     tools:context=".activitysecond">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/auth"
         android:layout_width="288dp"
         android:layout_height="59dp"
         android:text="Авторизация"
+        android:theme="@style/Button.Orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327"
-        android:theme="@style/Button.Orange"/>
+        app:layout_constraintVertical_bias="0.327" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/registration"
         android:layout_width="290dp"
         android:layout_height="62dp"
         android:text="Регистрация"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.57"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455"
-        android:theme="@style/Button.Orange"/>
+        android:theme="@style/Button.Orange"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="304dp" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="second_activity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
 </androidx.constraintlayout.widget.ConstraintLayout>

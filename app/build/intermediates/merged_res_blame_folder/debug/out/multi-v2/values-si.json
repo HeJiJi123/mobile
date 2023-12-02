@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile.app-mergeDebugResources-29:/values-si/values-si.xml",
+            "outputFile": "com.example.mobile.app-mergeDebugResources-30:/values-si/values-si.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Student\\.gradle\\caches\\transforms-3\\14c8f4d9859ab4670012378cf62d3d56\\transformed\\material-1.10.0\\res\\values-si\\values-si.xml",

@@ -41,7 +41,7 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID_COLL = "collector_id";
     public static final String COLUMN_ID_DESPE = "despetcher_id";
     public static final String COLUMN_NAME_POIN = "name_poin";
-    public static final String COLUMN_NAME_ADRESS = "adress_name";
+    public static final String COLUMN_NAME_ADDRESS = "address_name";
 
     public CourierDatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -53,75 +53,32 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table "+TABLE_2+" (" +
-                ""+COLUMN_ID_ORDER+" integer primary key autoincrement," +
-                ""+COLUMN_ORDER_TYPE+" text)" +
-                ""+COLUMN_NUMBER_ORDER+"text");
-        db.execSQL("Create table "+TABLE_3+" (" +
-                ""+COLUMN_ID_COL+" integer primary key autoincrement," +
-                ""+COLUMN_NAME_FIO+" text)" +
-                ""+COLUMN_ORDER_COM+" text");
-        db.execSQL("Create table "+TABLE_4+" (" +
-                ""+COLUMN_ID_TYPE+" integer primary key autoincrement," +
-                ""+COLUMN_NAME_TYPE+" text)");
-        db.execSQL("Create table "+TABLE_1+" (" +
-                ""+COLUMN_ID_DESPETCHER+" integer primary key autoincrement," +
-                ""+COLUMN_NAME_FIRST+" text)" +
-                ""+COLUMN_NAME_NAME+" text)" +
-                ""+COLUMN_FATHER_NAME+"text");
-        db.execSQL("Create table "+TABLE_5+" (" +
-                ""+COLUMN_ID_POIN+" integer primary key autoincrement," +
-                ""+COLUMN_ID_COLL+" integer," +
-                ""+COLUMN_ID_DES+" integer," +
-                ""+COLUMN_ID_ORDER+" integer," +
-                ""+COLUMN_NAME_POIN+" text)" +
-                ""+COLUMN_NAME_ADRESS+" text)"+
-                "Foreign key("+COLUMN_ID_DESPETCHER+") references "+TABLE_2+"("+COLUMN_ID_DESPETCHER+")," +
-                "Foreign key("+COLUMN_ID_COL+") references "+TABLE_5+"("+COLUMN_ID_COL+")," +
-                "Foreign key("+COLUMN_ID_ORDER+") references "+TABLE_3+"("+COLUMN_ID_ORDER+"))");
-        db.execSQL("INSERT INTO "+TABLE_2+" ("+COLUMN_ORDER_TYPE+") VALUES ('одежда');");
-        db.execSQL("INSERT INTO "+TABLE_2+" ("+COLUMN_NUMBER_ORDER+") VALUES ('1024');");
-        db.execSQL("INSERT INTO "+TABLE_1+" ("+COLUMN_NAME_FIRST+") VALUES ('Бекирова');");
-        db.execSQL("INSERT INTO "+TABLE_1+" ("+COLUMN_NAME_NAME+") VALUES ('Нелли');");
-        db.execSQL("INSERT INTO "+TABLE_1+" ("+COLUMN_FATHER_NAME+") VALUES ('Рифатовна');");
-        db.execSQL("INSERT INTO "+TABLE_3+" ("+COLUMN_NAME_FIO+") VALUES ('Волков Виталий Борисович');");
-        db.execSQL("INSERT INTO "+TABLE_3+" ("+COLUMN_ORDER_COM+") VALUES ('Платье летнее');");
-        db.execSQL("INSERT INTO "+TABLE_5+" ("+COLUMN_ID_POIN+", "+COLUMN_ID_COLL+", "+COLUMN_ID_DES+"," +
-                " "+COLUMN_ID_ORDER+", "+COLUMN_NAME_POIN+", "+COLUMN_NAME_ADRESS+") VALUES (15234,1,123,56,'wildberries','Авиастроитель'), (15624,1,123,'ozone',Баумана);");
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text)%stext", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_FIRST, COLUMN_NAME_NAME, COLUMN_FATHER_NAME));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('одежда');", TABLE_2, COLUMN_ORDER_TYPE));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('1024');", TABLE_2, COLUMN_NUMBER_ORDER));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Бекирова');", TABLE_1, COLUMN_NAME_FIRST));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Нелли');", TABLE_1, COLUMN_NAME_NAME));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Рифатовна');", TABLE_1, COLUMN_FATHER_NAME));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Волков Виталий Борисович');", TABLE_3, COLUMN_NAME_FIO));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Платье летнее');", TABLE_3, COLUMN_ORDER_COM));
+        db.execSQL(String.format("INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES (15234,1,123,56,'wildberries','Авиастроитель'), (15624,1,123,'ozone',Баумана);", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS));
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
         if(newVersion>0){
-            db.execSQL("Create table "+TABLE_2+" (" +
-                    ""+COLUMN_ID_ORDER+" integer primary key autoincrement," +
-                    ""+COLUMN_ORDER_TYPE+" text)" +
-                    ""+COLUMN_NUMBER_ORDER+"text");
-            db.execSQL("Create table "+TABLE_3+" (" +
-                    ""+COLUMN_ID_COL+" integer primary key autoincrement," +
-                    ""+COLUMN_NAME_FIO+" text)" +
-                    ""+COLUMN_ORDER_COM+" text");
-            db.execSQL("Create table "+TABLE_4+" (" +
-                    ""+COLUMN_ID_TYPE+" integer primary key autoincrement," +
-                    ""+COLUMN_NAME_TYPE+" text)");
-            db.execSQL("Create table "+TABLE_1+" (" +
-                    ""+COLUMN_ID_DESPETCHER+" integer primary key autoincrement," +
-                    ""+COLUMN_NAME_FIRST+" text)" +
-                    ""+COLUMN_NAME_NAME+" text)" +
-                    ""+COLUMN_FATHER_NAME+"text");
-            db.execSQL("Create table "+TABLE_5+" (" +
-                    ""+COLUMN_ID_POIN+" integer primary key autoincrement," +
-                    ""+COLUMN_ID_COLL+" integer," +
-                    ""+COLUMN_ID_DES+" integer," +
-                    ""+COLUMN_ID_ORDER+" integer," +
-                    ""+COLUMN_NAME_POIN+" text)" +
-                    ""+COLUMN_NAME_ADRESS+" text)"+
-                    "Foreign key("+COLUMN_ID_DESPETCHER+") references "+TABLE_2+"("+COLUMN_ID_DESPETCHER+")," +
-                    "Foreign key("+COLUMN_ID_COL+") references "+TABLE_5+"("+COLUMN_ID_COL+")," +
-                    "Foreign key("+COLUMN_ID_ORDER+") references "+TABLE_3+"("+COLUMN_ID_ORDER+"))");
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text)", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text,%s text)", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_FIRST, COLUMN_NAME_NAME, COLUMN_FATHER_NAME));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
         }
         onCreate(db);
     }
-    public void insertPOIN_OF_ISSUE(String despetcher, long order, String collector, String poin){
+    public void insertPOIN_OF_ISSUE(String despetcher, long order, String collector, String poin, String address){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -130,8 +87,7 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_ID_ORDER,order);
         values.put(COLUMN_ID_COLL,collector);
         values.put(COLUMN_NAME_POIN,poin);
-        String adress;
-        values.put(COLUMN_NAME_ADRESS,adress);
+        values.put(COLUMN_NAME_ADDRESS, address);
 
         db.insert(TABLE_1, null, values);
     }
@@ -183,7 +139,7 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_NAME_POIN,name);
-        values.put(COLUMN_NAME_ADRESS,adress);
+        values.put(COLUMN_NAME_ADDRESS,adress);
 
         db.update(TABLE_5,values,COLUMN_ID_POIN+ "=" + id, null);
     }

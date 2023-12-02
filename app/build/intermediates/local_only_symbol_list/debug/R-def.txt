@@ -4,12 +4,11 @@ color black
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id activity_button
+id activity_buttontwo
+id activity_third
+id auth
 id authButton
-id button
-id button2
-id button3
-id button4
-id button5
 id button6
 id editText
 id editTextDate
@@ -19,8 +18,12 @@ id editTextTextPassword
 id editTextTextPassword2
 id listView
 id registerButton
+id registration
+id spCourier
 id spCourierCompany
 id textView
+id textView11
+id textView12
 id textView2
 id textView3
 id textView4
@@ -32,6 +35,7 @@ layout activity_activitysecondone
 layout activity_activitysecondtwo
 layout activity_activitythird
 layout activity_fourthone
+layout activity_fouthtwo
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round

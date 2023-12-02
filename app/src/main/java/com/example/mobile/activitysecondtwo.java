@@ -2,6 +2,7 @@ package com.example.mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,10 @@ public class activitysecondtwo extends AppCompatActivity {
         editTextDate = findViewById(R.id.editTextDate);
         editTextTextPassword2 = findViewById(R.id.editTextTextPassword2);
         registerButton = findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override

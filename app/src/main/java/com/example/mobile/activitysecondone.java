@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Intent;
 
-public class activitysecondone extends AppCompatActivity {
+public class activitysecondone<intent> extends AppCompatActivity {
     private EditText editTextPhone;
     private EditText editTextTextPassword;
     private Button authButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +21,15 @@ public class activitysecondone extends AppCompatActivity {
         editTextPhone = findViewById(R.id.editTextPhone);
         editTextTextPassword = findViewById(R.id.editTextTextPassword);
         authButton = findViewById(R.id.authButton);
-
-        authButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String phoneNumber = editTextPhone.getText().toString();
-                String Password = editTextTextPassword.getText().toString();
-            }
+        authButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, activity_secondtwo.class);
+            startActivity(intent);
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        String phoneNumber = editTextPhone.getText().toString();
+        String Password = editTextTextPassword.getText().toString();
     }
 }

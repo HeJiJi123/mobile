@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Mobile" >
         <activity
+            android:name="com.example.mobile.activity_fouthtwo"
+            android:exported="false" />
+        <activity
             android:name="com.example.mobile.fourthone"
             android:exported="false" />
         <activity

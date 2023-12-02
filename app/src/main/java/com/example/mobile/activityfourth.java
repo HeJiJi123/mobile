@@ -2,10 +2,12 @@ package com.example.mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 public class activityfourth extends AppCompatActivity {
     private EditText editText;
     private ListView listView;
+    private Button button;
 
     private Bundle savedInstanceState;
 
@@ -47,7 +50,11 @@ public class activityfourth extends AppCompatActivity {
                 return false;
             }
         });
-    }
+            button.setOnClickListener(v -> {
+                Intent intent = new Intent(this, activity_fourthone.class);
+                startActivity(intent);
+            });
+        }
 
     private Object finalize(int listView) {
         return null;
