@@ -9,6 +9,8 @@ id activity_buttontwo
 id activity_third
 id auth
 id authButton
+id button
+id button2
 id button6
 id editText
 id editTextDate

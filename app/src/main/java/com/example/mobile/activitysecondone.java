@@ -27,9 +27,11 @@ public class activitysecondone<intent> extends AppCompatActivity {
         });
     }
 
-    @Override
     public void onClick(View view) {
         String phoneNumber = editTextPhone.getText().toString();
         String Password = editTextTextPassword.getText().toString();
+    }
+
+    private class activity_secondtwo {
     }
 }

@@ -11,6 +11,7 @@
         android:layout_width="288dp"
         android:layout_height="59dp"
         android:text="Авторизация"
+        android:onClick="goToSecondOneActivity"
         android:theme="@style/Button.Orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,9 +24,14 @@
         android:id="@+id/registration"
         android:layout_width="290dp"
         android:layout_height="62dp"
+        android:onClick="goToSecondTwoActivity"
         android:text="Регистрация"
         android:theme="@style/Button.Orange"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="304dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.452" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
