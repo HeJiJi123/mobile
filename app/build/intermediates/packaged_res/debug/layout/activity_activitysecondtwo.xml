@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerButton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activitysecondtwo">
@@ -22,6 +23,7 @@
         android:id="@+id/editTextPhone2"
         android:layout_width="254dp"
         android:layout_height="51dp"
+        android:contentDescription="Enter Phone namber"
         android:ems="10"
         android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,8 +31,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
-        android:contentDescription="Enter Phone namber"/>
+        app:layout_constraintVertical_bias="0.35" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -64,8 +65,8 @@
         android:id="@+id/registerButton"
         android:layout_width="195dp"
         android:layout_height="48dp"
-        android:text="Регистрация"
         android:onClick="goToSecondOneActivity"
+        android:text="Регистрация"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"

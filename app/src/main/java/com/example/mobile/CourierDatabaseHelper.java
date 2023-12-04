@@ -15,9 +15,8 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
     static final String TABLE_1 = "Despetcher";
 
     public static final String COLUMN_ID_DESPETCHER = "_id";
-    public static final String COLUMN_NAME_FIRST = "first_name";
-    public static final String COLUMN_NAME_NAME = "name_name";
-    public static final String COLUMN_FATHER_NAME = "father_name";
+    public static final String COLUMN_NAME_NICK = "nick_name";
+    public static final String COLUMN_PASSWORD_NAME = "password_name";
 
     static final String TABLE_2 = "Order";
 
@@ -56,13 +55,12 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
-        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text)%stext", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_FIRST, COLUMN_NAME_NAME, COLUMN_FATHER_NAME));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text)%stext", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_NICK, COLUMN_PASSWORD_NAME));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('одежда');", TABLE_2, COLUMN_ORDER_TYPE));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('1024');", TABLE_2, COLUMN_NUMBER_ORDER));
-        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Бекирова');", TABLE_1, COLUMN_NAME_FIRST));
-        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Нелли');", TABLE_1, COLUMN_NAME_NAME));
-        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Рифатовна');", TABLE_1, COLUMN_FATHER_NAME));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('HeJiJi');", TABLE_1, COLUMN_NAME_NICK));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('qweqwe123');", TABLE_1, COLUMN_PASSWORD_NAME));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Волков Виталий Борисович');", TABLE_3, COLUMN_NAME_FIO));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Платье летнее');", TABLE_3, COLUMN_ORDER_COM));
         db.execSQL(String.format("INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES (15234,1,123,56,'wildberries','Авиастроитель'), (15624,1,123,'ozone',Баумана);", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS));
@@ -73,7 +71,7 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text)", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
-            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text,%s text)", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_FIRST, COLUMN_NAME_NAME, COLUMN_FATHER_NAME));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text,%s text)", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_NICK, COLUMN_PASSWORD_NAME));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
         }
         onCreate(db);

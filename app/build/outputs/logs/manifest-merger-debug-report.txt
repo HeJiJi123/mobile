@@ -98,45 +98,45 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Student\.gradle\ca
 	android:dataExtractionRules
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:7:9-65
 activity#com.example.mobile.activity_fouthtwo
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:15:9-17:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:16:13-46
 activity#com.example.mobile.fourthone
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:18:9-20:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:20:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:19:13-38
 activity#com.example.mobile.activityfourth
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:21:9-23:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:23:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:22:13-43
 activity#com.example.mobile.activitythird
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:24:9-26:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:24:9-26:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:26:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:25:13-42
 activity#com.example.mobile.activitysecondtwo
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:27:9-29:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:27:9-29:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:28:13-46
 activity#com.example.mobile.activitysecondone
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:30:9-32:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:30:9-32:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:32:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:31:13-46
 activity#com.example.mobile.activitysecond
-ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:33:9-35:39
+ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:33:9-35:40
 	android:exported
-		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:35:13-36
+		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:35:13-37
 	android:name
 		ADDED from C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:34:13-43
 activity#com.example.mobile.MainActivity

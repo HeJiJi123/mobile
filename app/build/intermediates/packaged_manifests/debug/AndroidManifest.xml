@@ -29,25 +29,25 @@
         android:theme="@style/Theme.Mobile" >
         <activity
             android:name="com.example.mobile.activity_fouthtwo"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.fourthone"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.activityfourth"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.activitythird"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.activitysecondtwo"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.activitysecondone"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.activitysecond"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name="com.example.mobile.MainActivity"
             android:exported="true" >

@@ -43,47 +43,47 @@
 29        android:theme="@style/Theme.Mobile" >
 29-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:13:9-44
 30        <activity
-30-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:15:9-17:39
+30-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:15:9-17:40
 31            android:name="com.example.mobile.activity_fouthtwo"
 31-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:16:13-46
-32            android:exported="true" />
-32-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:17:13-36
+32            android:exported="false" />
+32-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:17:13-37
 33        <activity
-33-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:18:9-20:39
+33-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:18:9-20:40
 34            android:name="com.example.mobile.fourthone"
 34-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:19:13-38
-35            android:exported="true" />
-35-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:20:13-36
+35            android:exported="false" />
+35-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:20:13-37
 36        <activity
-36-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:21:9-23:39
+36-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:21:9-23:40
 37            android:name="com.example.mobile.activityfourth"
 37-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:22:13-43
-38            android:exported="true" />
-38-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:23:13-36
+38            android:exported="false" />
+38-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:23:13-37
 39        <activity
-39-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:24:9-26:39
+39-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:24:9-26:40
 40            android:name="com.example.mobile.activitythird"
 40-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:25:13-42
-41            android:exported="true" />
-41-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:26:13-36
+41            android:exported="false" />
+41-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:26:13-37
 42        <activity
-42-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:27:9-29:39
+42-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:27:9-29:40
 43            android:name="com.example.mobile.activitysecondtwo"
 43-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:28:13-46
-44            android:exported="true" />
-44-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:29:13-36
+44            android:exported="false" />
+44-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:29:13-37
 45        <activity
-45-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:30:9-32:39
+45-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:30:9-32:40
 46            android:name="com.example.mobile.activitysecondone"
 46-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:31:13-46
-47            android:exported="true" />
-47-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:32:13-36
+47            android:exported="false" />
+47-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:32:13-37
 48        <activity
-48-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:33:9-35:39
+48-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:33:9-35:40
 49            android:name="com.example.mobile.activitysecond"
 49-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:34:13-43
-50            android:exported="true" />
-50-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:35:13-36
+50            android:exported="false" />
+50-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:35:13-37
 51        <activity
 51-->C:\Users\Student\AndroidStudioProjects\mobile\app\src\main\AndroidManifest.xml:36:9-44:20
 52            android:name="com.example.mobile.MainActivity"

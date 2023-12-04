@@ -9,14 +9,15 @@ import android.widget.Button;
 
 public class activitysecond extends AppCompatActivity {
 
-    private View button;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activitysecond);
+        button = findViewById( R.id.registration );
         button.setOnClickListener(v -> {
-            Intent intent = new Intent(this, activity_secondone.class);
+            Intent intent = new Intent(this, activity_secondtwo.class);
             startActivity(intent);
         });
     }
