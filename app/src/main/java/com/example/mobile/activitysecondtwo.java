@@ -27,8 +27,9 @@ public class activitysecondtwo extends AppCompatActivity {
             registerButton.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    String editTexText = editTexText.getText().toString();
+                    String EditTexText = editTexText.getText().toString();
                     String Password = editTextTextPassword2.getText().toString();
+                    finish();
                 }
             } );
         } );

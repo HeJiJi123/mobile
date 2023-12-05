@@ -21,4 +21,7 @@ public class activitysecond extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    private class activity_secondtwo {
+    }
 }

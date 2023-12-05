@@ -28,7 +28,7 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
 
     static final String TABLE_3 = "ORDER_COLLECTOR";
     public static final String COLUMN_ID_COL = "collector_id";
-    public static final String COLUMN_NAME_FIO = "fio_name";
+    public static final String COLUMN_NICK_NAME = "nick_name";
     public static final String COLUMN_ORDER_COM = "order_composition";
 
     static final String TABLE_4 = "ORDER_TYPE";
@@ -53,15 +53,15 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
-        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
+        db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text", TABLE_3, COLUMN_ID_COL, COLUMN_NICK_NAME, COLUMN_ORDER_COM));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%s text)%stext", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_NICK, COLUMN_PASSWORD_NAME));
         db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('одежда');", TABLE_2, COLUMN_ORDER_TYPE));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('1024');", TABLE_2, COLUMN_NUMBER_ORDER));
-        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('HeJiJi');", TABLE_1, COLUMN_NAME_NICK));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('king123');", TABLE_1, COLUMN_NAME_NICK));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('qweqwe123');", TABLE_1, COLUMN_PASSWORD_NAME));
-        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Волков Виталий Борисович');", TABLE_3, COLUMN_NAME_FIO));
+        db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('king123');", TABLE_3, COLUMN_NICK_NAME));
         db.execSQL(String.format("INSERT INTO %s (%s) VALUES ('Платье летнее');", TABLE_3, COLUMN_ORDER_COM));
         db.execSQL(String.format("INSERT INTO %s (%s, %s, %s, %s, %s, %s) VALUES (15234,1,123,56,'wildberries','Авиастроитель'), (15624,1,123,'ozone',Баумана);", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS));
     }
@@ -69,63 +69,67 @@ public class CourierDatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
         if(newVersion>0){
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)%stext", TABLE_2, COLUMN_ID_ORDER, COLUMN_ORDER_TYPE, COLUMN_NUMBER_ORDER));
-            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text)", TABLE_3, COLUMN_ID_COL, COLUMN_NAME_FIO, COLUMN_ORDER_COM));
+            db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text)", TABLE_3, COLUMN_ID_COL, COLUMN_NICK_NAME, COLUMN_ORDER_COM));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text)", TABLE_4, COLUMN_ID_TYPE, COLUMN_NAME_TYPE));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s text,%s text,%s text)", TABLE_1, COLUMN_ID_DESPETCHER, COLUMN_NAME_NICK, COLUMN_PASSWORD_NAME));
             db.execSQL(String.format("Create table %s (%s integer primary key autoincrement,%s integer,%s integer,%s integer,%s text)%s text)Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s),Foreign key(%s) references %s(%s))", TABLE_5, COLUMN_ID_POIN, COLUMN_ID_COLL, COLUMN_ID_DES, COLUMN_ID_ORDER, COLUMN_NAME_POIN, COLUMN_NAME_ADDRESS, COLUMN_ID_DESPETCHER, TABLE_2, COLUMN_ID_DESPETCHER, COLUMN_ID_COL, TABLE_5, COLUMN_ID_COL, COLUMN_ID_ORDER, TABLE_3, COLUMN_ID_ORDER));
         }
         onCreate(db);
     }
-    public void insertPOIN_OF_ISSUE(String despetcher, long order, String collector, String poin, String address){
+    public void insertPOIN_OF_ISSUE(String despetcher, long order, String nick_name, String poin, String address){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_ID_DES,despetcher);
         values.put(COLUMN_ID_ORDER,order);
-        values.put(COLUMN_ID_COLL,collector);
+        values.put(COLUMN_NICK_NAME,nick_name);
         values.put(COLUMN_NAME_POIN,poin);
         values.put(COLUMN_NAME_ADDRESS, address);
 
         db.insert(TABLE_1, null, values);
     }
 
-    public void insertDespetcher(String despetcher){
+    public void insertDespetcher(String despetcher, String nick_name, String password){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_ID_DES,despetcher);
-
+        values.put(COLUMN_NAME_NICK,nick_name);
+        values.put(COLUMN_PASSWORD_NAME,password);
         db.insert(TABLE_1, null, values);
     }
 
-    public void insertPoin_of_issue(String poin, String adress){
+    public void insertPoin_of_issue(String poin, String addres){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-
         values.put(COLUMN_ID_POIN,poin);
-
+        values.put(COLUMN_NAME_ADDRESS, addres);
         db.insert(TABLE_5, null, values);
     }
 
-    public void insertORDER_COLLECTOR(String collector){
+    public void insertORDER_COLLECTOR(String collector, String nick_name){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_ID_DES,collector);
+        values.put(COLUMN_NAME_NICK,nick_name);
+
 
         db.insert(TABLE_3, null, values);
     }
 
-    public void insertOrder(String order){
+    public void insertOrder(String order, String order_type, String nubmer_order){
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
 
         values.put(COLUMN_ID_ORDER,order);
+        values.put(COLUMN_ORDER_TYPE,order_type);
+        values.put(COLUMN_NUMBER_ORDER,nubmer_order);
 
         db.insert(TABLE_2, null, values);
     }
